@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="column column-left">
+    <h1 class="title">Learn to code by watching others</h1>
+    <p class="paragraph-title">See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+      but understanding how developers think is invaluable.</p>
+  </div>
+  <div class="column column-right">
+    <div class="banner">
+      <h4>Try it free 7 days then $20/mo</h4>
+    </div>
+    <div class="form">
+      <form class="signup" method="post" onsubmit="return validate()">
+        <input type="text" class="input" id="fname" name="fname" value="" placeholder="First Name">
+        <img class="icon fname" id="icon-fname"src="images/icon-error.svg" alt="">
+        <input type="text" class="input" id="lname" name="lsname" value="" placeholder="Last Name">
+        <img class="icon lname" id="icon-lname"src="images/icon-error.svg" alt="">
+        <input type="text" class="input" id="email" name="email" value="" placeholder="Email Address">
+        <img class="icon email" id="icon-email" src="images/icon-error.svg" alt="">
+        <input type="text" class="input" id="pass" name="pass" value="" placeholder="Password">
+        <img class="icon pass" id="icon-pass" src="images/icon-error.svg" alt="">
+        <button type="submit" class="button-submit" name="button" onsubmit="return validate()">CLAIM YOUR FREE TRIAL</button>
+        <p class="paragraph-submit">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
+  <script type="text/javascript">
+    function validate(){
+      var answer= true;
+      if(document.getElementById('fname').value == ''){
+        document.getElementById('icon-fname').style.display = "block";
+        alert("I am here");
+        answer= false;
+      }
+      if(document.getElementById('lname').value == ''){
+        document.getElementById('icon-lname').style.display = "block";
+        answer= false;
+      }
+      if(document.getElementById('email').value == ''){
+        document.getElementById('icon-email').style.display = "block";
+        answer= false;
+      }
+      if(document.getElementById('pass').value == ''){
+        document.getElementById('icon-pass').style.display = "block";
+        answer= false;
+      }
+      return answer;
+    }
+
+  </script>
+</body>
+</html>

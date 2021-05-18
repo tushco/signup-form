@@ -1,0 +1,140 @@
+body{
+  background-image: url(../images/bg-intro-desktop.png);
+  background-color: hsl(0, 100%, 74%) ;
+  display:flex;
+  flex-direction: row;
+}
+
+.column{
+  width: 50%;
+
+  color:white;
+}
+.banner{
+  width:80%;
+  padding:5px 20px;
+  background-color:hsl(248, 32%, 49%);
+  text-align: center;
+  margin-bottom:20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form{
+  display:flex;
+  flex-direction: column;
+  background-color: white;
+  padding:20px;
+  width:80%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.input{
+  display:block;
+  width:90%;
+  padding:20px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  margin: 0 auto 10;
+  border-color: hsl(246, 25%, 77%);
+}
+
+.form-line-active input:focus, .form-line-active textarea:focus {
+border: 1px solid hsl(249, 10%, 26%)  !important;
+box-shadow: 0 0 3px hsl(249, 10%, 26%)  !important;
+-moz-box-shadow: 0 0 3px hsl(249, 10%, 26%)  !important;
+-webkit-box-shadow: 0 0 3px hsl(249, 10%, 26%)  !important;
+}
+
+input:focus, textarea:focus, select:focus {
+outline-offset: 0px !important;
+outline: none !important;
+}
+
+.button-submit{
+  padding:20px;
+  display: block;
+  width:100%;
+  background-color: hsl(154, 59%, 51%);
+  margin: 0 auto;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+}
+
+.paragraph-submit{
+  color:hsl(246, 25%, 77%);
+  text-align: center;
+}
+
+span{
+  color:hsl(0, 100%, 74%) ;
+}
+.column-left{
+  margin-top: 100px;
+  padding: 80px
+}
+.column-right{
+  margin-top: 100px;
+  padding:20px;
+}
+
+.title{
+  font-size: 60px;
+}
+
+.paragraph-title{
+  font-size: 25px;
+}
+
+.icon{
+  display: none;
+  position: absolute;
+  right: 150px;
+}
+
+.fname{
+  top:260px;
+}
+
+.lname{
+  top:330px;
+}
+
+.email{
+  top:400px;
+}
+
+.pass{
+  top:470px;
+}
+
+@media screen and (max-width: 1219px){
+  body{
+    display:block;
+  }
+  .column, .banner, .form{
+    width:100%;
+  }
+  .column-right{
+    margin-top:0;
+    margin-bottom: 100px;
+  }
+  .icon{
+    right: 0px;
+  }
+  .fname{
+    top: 870px;
+  }
+  .lname{
+    top: 940px;
+  }
+  .email{
+    top: 1010px;
+  }
+  .pass{
+    top:1080px;
+  }
+}
